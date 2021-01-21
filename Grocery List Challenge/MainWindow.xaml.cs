@@ -38,6 +38,7 @@ namespace Grocery_List_Challenge {
 
         private void Button_Click_1(object sender, RoutedEventArgs e) {
             if (num+1 == listarray.Length) lblTellToAdd.Content = "Press again to print list";
+            if(num+1 < listarray.Length) lblTellToAdd.Content = "Enter Item: " + (num + 2);
 
             additem();           
         }
@@ -61,7 +62,9 @@ namespace Grocery_List_Challenge {
                 }
                 lblTotal.Content = string.Format("Total: {0:c}", total);
             }
-            
+            tboxItemPrice.Text = null;
+            tboxItemName.Text = null;
+
         }
 
 
